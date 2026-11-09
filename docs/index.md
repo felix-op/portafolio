@@ -17,8 +17,9 @@ portafolio/
 │   ├── models/           # Interfaces, tipos y contratos de datos de TypeScript
 │   ├── pages/            # Rutas y páginas de la aplicación (enrutador basado en archivos de Astro)
 │   ├── services/         # Capa de servicios para obtención y gestión de datos
+│   ├── styles/           # Estilos globales y configuración de Tailwind CSS v4
 │   └── utils/            # Funciones utilitarias y helpers compartidos
-├── astro.config.mjs      # Configuración de Astro e integraciones (React)
+├── astro.config.mjs      # Configuración de Astro, integraciones (React) y plugins Vite (Tailwind v4)
 ├── eslint.config.mjs     # Configuración básica de ESLint
 ├── package.json          # Dependencias y scripts de npm
 └── tsconfig.json         # Configuración estricta de TypeScript
@@ -41,6 +42,9 @@ portafolio/
 - **`src/services/`**:
   - Lógica para consultar, transformar y suministrar datos a las páginas y componentes (consumo de APIs, lectura de datos o mocks).
 
+- **`src/styles/`**:
+  - Estilos globales (`global.css`) e importación de directivas de Tailwind CSS v4 (`@import "tailwindcss";`).
+
 - **`src/utils/`**:
   - Funciones puras reutilizables (formateo de fechas, manipuladores de cadenas, helpers, etc.).
 
@@ -49,4 +53,5 @@ portafolio/
 - **Gestor de paquetes**: Siempre utilizar `pnpm`.
 - **Dependencias exactas**: Instalar dependencias con versiones fijas/exactas (sin `^` ni `~`), utilizando la bandera `--save-exact` o `-E`.
 - **TypeScript**: Modo estricto habilitado (`astro/tsconfigs/strictest` y `"strict": true`). No se permite el uso de `any` implícito.
+- **Estilos**: Tailwind CSS v4 integrado mediante `@tailwindcss/vite`.
 - **Linter**: ESLint configurado con `eslint-plugin-astro`.
