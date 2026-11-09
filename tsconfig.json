@@ -1,5 +1,18 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@models/*": ["./src/models/*"],
+      "@services/*": ["./src/services/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@mocks/*": ["./src/mocks/*"]
+    }
+  },
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "exclude": ["dist", "node_modules"]
 }

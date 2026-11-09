@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "portafolio",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -9,9 +9,20 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "astro": "^7.4.7"
+    "@astrojs/react": "7.1.4",
+    "astro": "7.4.7",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "10.14.0",
+    "eslint-plugin-astro": "3.2.1",
+    "typescript": "7.0.2"
   }
 }
